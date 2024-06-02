@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Weather App</title>
+</head>
+<body>
+    <div class="mdiv">
+        <div class="weatherapp">
+            <h1 class="title">Weather</h1>
+            <div>
+                <form class="form">
+                    <button type="button" onclick="getData()">
+                        <svg width="17" height="16" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="search">
+                            <path d="M7.667 12.667A5.333 5.333 0 107.667 2a5.333 5.333 0 000 10.667zM14.334 14l-2.9-2.9" stroke="currentColor" stroke-width="1.333" stroke-linecap="round" stroke-linejoin="round"></path>
+                        </svg>
+                    </button>
+                    <input class="input" placeholder="Enter Your City" required="" type="text" id="city" autocomplete="off">
+                    <button class="reset" type="reset" >
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12"></path>
+                        </svg>
+                    </button>
+                </form>
+            </div>
+            <div class="info1">
+                <div>
+                    <img src="sunny cloud.svg" alt="Weather Image" id="weatherimg" class="weather_img">
+                </div>
+                <div class="deg">
+                    <h1 id="tempm">29<sup>o</sup>C</h1>
+                    <h2 id="namem">Pune</h2>
+                </div>
+            </div>
+            <div class="info2">
+                <div>
+                    <img src="humidity.svg" alt="Humidity" class="imgweather">
+                    <h3>Humidity</h3>
+                    <h4 id="hmd">50%</h4>
+                </div>
+                <div  class="degc">
+                    <h1 id="temp">29<sup>o</sup>C</h1>
+                    <h2 id="name">Pune</h2>
+                </div>
+                <div>
+                    <img src="wind.svg" alt="Wind" class="imgweather">
+                    <h3>Wind</h3>
+                    <h4 id="wnd">5 Kmph</h4>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <script src="script.js"></script>
+</body>
+</html>

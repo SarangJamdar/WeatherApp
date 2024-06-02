@@ -1,0 +1,200 @@
+*
+{
+   padding: 0;
+   margin: 0;
+   box-sizing: border-box; 
+   /* color: #fff; */
+}
+
+.title{
+    font-size: 2.3rem;
+    color: #fff;
+}
+
+
+.mdiv
+{
+    width: 100%;
+    height: 100dvh;
+    top: 0;
+    left: 0;
+    background-image: url(bg.jpg);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.weatherapp
+{
+    width: 70%;
+    height: 70%;
+    background-image:linear-gradient(to right bottom,rgba(255,255,255,0.4),rgba(255,255,255,0.2)) ;
+    backdrop-filter: blur(1rem);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 3rem;
+    padding-top: 2rem;
+    border-radius: 50px;
+    box-shadow: 0 0 10px #0000005f;
+
+}
+
+#weatherimg
+{
+    height: 20vh;
+}
+
+.form
+{
+    margin-top: 1rem;
+    margin-bottom: 2rem;
+}
+
+
+.info2{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    margin-top: 2rem;
+    font-size: 1.5rem;
+    color: #fff;
+}
+
+.imgweather
+{
+    height: 10vh;
+    width: auto;
+}
+
+.deg{
+    display: none;
+}
+@media(max-width: 768px) {
+
+    .title{
+    font-size: 2rem;
+    color: #fff;
+    }
+
+    .info2{
+        justify-content: space-between;
+        font-size: 1.2rem;
+    }
+
+    .deg{
+        display: block;
+        margin-top: 1rem;
+        color: #fff;
+    }
+    .degc{
+        display: none;
+    }
+    .info1{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+    
+
+    .imgweather
+    {
+    height: 5vh;
+    width: auto;
+    }
+
+    .weatherapp{
+        width: 80%;
+    }
+    .mdiv{
+        background-size: cover;
+        background-position: 50%;
+    }
+
+    
+}
+/* Button Styling */
+/* From uiverse.io by @satyamchaudharydev */
+/* removing default style of button */
+
+.form button {
+    border: none;
+    background: none;
+    color: #8b8ba7;
+  }
+  /* styling of whole input container */
+  .form {
+    --timing: 0.3s;
+    --width-of-input: 200px;
+    --height-of-input: 40px;
+    --border-height: 2px;
+    --input-bg: #fff;
+    --border-color: #000000;
+    --border-radius: 30px;
+    --after-border-radius: 1px;
+    position: relative;
+    width: var(--width-of-input);
+    height: var(--height-of-input);
+    display: flex;
+    align-items: center;
+    padding-inline: 0.8em;
+    border-radius: var(--border-radius);
+    transition: border-radius 0.5s ease;
+    background: var(--input-bg,#fff);
+  }
+  /* styling of Input */
+  .input {
+    font-size: 0.9rem;
+    background-color: transparent;
+    width: 100%;
+    height: 100%;
+    padding-inline: 0.5em;
+    padding-block: 0.7em;
+    border: none;
+  }
+  /* styling of animated border */
+  .form:before {
+    content: "";
+    position: absolute;
+    background: var(--border-color);
+    transform: scaleX(0);
+    transform-origin: center;
+    width: 100%;
+    height: var(--border-height);
+    left: 0;
+    bottom: 0;
+    border-radius: 1px;
+    transition: transform var(--timing) ease;
+  }
+  /* Hover on Input */
+  .form:focus-within {
+    border-radius: var(--after-border-radius);
+  }
+  
+  input:focus {
+    outline: none;
+  }
+  /* here is code of animated border */
+  .form:focus-within:before {
+    transform: scale(1);
+  }
+  /* styling of close button */
+  /* == you can click the close button to remove text == */
+  .reset {
+    border: none;
+    background: none;
+    opacity: 0;
+    visibility: hidden;
+  }
+  /* close button shown when typing */
+  input:not(:placeholder-shown) ~ .reset {
+    opacity: 1;
+    visibility: visible;
+  }
+  /* sizing svg icons */
+  .form svg {
+    width: 17px;
+    margin-top: 3px;
+  }
